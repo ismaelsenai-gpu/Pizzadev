@@ -13,4 +13,12 @@ while True:
         break
     elif escolha.isdigit() and 1 <= int (escolha) <= len(pizzas):
         indice = int(escolha) - 1
-        print(f"Voce escolheu a pizza {pizzas[indice]} que custa R$ {precos[indice]:.2f}")
+        print(f"Voce escolheu a pizza {pizzas[indice]} que custa R$ {precos[indice]:.2f}, qual a forma de pagamento? (1 - Dinheiro, 2 - Cartão)")
+        input_pagamento = input("Digite o numero correspondente a forma de pagamento: ")
+    elif input_pagamento == '1':
+        print("Pagamento em dinheiro selecionado. Obrigado pela compra!")
+    elif input_pagamento == '2':
+            print("Pagamento com cartão selecionado. Obrigado pela compra!")
+    else:
+        print("Escolha inválida. Por favor, tente novamente.")
+
