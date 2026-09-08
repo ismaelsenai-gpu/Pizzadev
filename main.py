@@ -19,6 +19,8 @@ while True:
         print("Pagamento em dinheiro selecionado. Obrigado pela compra!")
     elif input_pagamento == '2':
             print("Pagamento com cartão selecionado. Obrigado pela compra!")
+    elif input_pagamento not in ['1', '2']:
+         print("Forma de pagamento invalida. Por favor, tente novamente.")
     else:
         print("Escolha inválida. Por favor, tente novamente.")
-
+    
