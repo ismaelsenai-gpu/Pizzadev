@@ -23,4 +23,4 @@ while True:
          print("Forma de pagamento invalida. Por favor, tente novamente.")
     else:
         print("Escolha inválida. Por favor, tente novamente.")
-    
+           
