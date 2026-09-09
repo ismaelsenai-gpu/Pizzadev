@@ -14,11 +14,3 @@ while True:
     elif escolha.isdigit() and 1 <= int (escolha) <= len(pizzas):
         indice = int(escolha) - 1
         print(f"Voce escolheu a pizza {pizzas[indice]} que custa R$ {precos[indice]:.2f}")
-
-def calcular_total(pedidos):
-    total = 0
-    for pedido in pedidos:
-        total += precos[pizzas.index(pedido)]
-    return total
-
-
