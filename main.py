@@ -7,10 +7,18 @@ for i in range(len(pizzas)):
     print(f"{i + 1}. {pizzas[i]} - R$ {precos[i]:.2f}")
 
 while True:
-    escolha = input("Escolha o numero da pizza que deseja pedir (ou 'sair' para encerrar): ")
-    if escolha.lower() == 'sair':
-        print("Obrigado por visitar nosso cardapio! VOLTE SEMPREEE")
+    escolha = input("Deseja fazer um pedido? (s/n):").strip().lower()
+    if escolha == 'n':
         break
-    elif escolha.isdigit() and 1 <= int (escolha) <= len(pizzas):
-        indice = int(escolha) - 1
-        print(f"Voce escolheu a pizza {pizzas[indice]} que custa R$ {precos[indice]:.2f}")
+    elif escolha == 's':
+        try:
+            numero_pizza = int(input("Digite o numero da pizza que deseja pedir (1-5): "))
+            if 1 <= numero_pizza <= len(pizzas):
+                pizza_escolhida = pizzas[numero_pizza - 1]
+                preco_pizza = precos[numero_pizza - 1]
+                print(f"Você escolheu a pizza {pizza_escolhida} que custa R$ {preco_pizza:.2f}.")
+            else:
+                print("Número de pizza inválido. Por favor, escolha um número entre 1 e 5. ")
+        except ValueError:
+            print("Entrada inválida. Por favor, digite um número inteiro.")
+            
