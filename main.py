@@ -21,4 +21,17 @@ while True:
                 print("Número de pizza inválido. Por favor, escolha um número entre 1 e 5. ")
         except ValueError:
             print("Entrada inválida. Por favor, digite um número inteiro.")
-            
+    else:
+        print("Opção invalida. Por favor, digite 's' para sim ou 'n' para não.")
+
+
+def valor_total_pedido(pizza_escolhida):
+    if pizza_escolhida in pizzas:
+        index = pizzas.index(pizza_escolhida)
+        return precos[index]
+    else:
+        return 0.0
+             
+
+
+valor_total_pedido(pizza_escolhida)
